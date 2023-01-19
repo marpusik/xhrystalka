@@ -1,0 +1,50 @@
+html {
+  /* 10px */
+  font-size: 62.5%;
+}
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+  @media (max-width: $breakpoint1450) {
+    max-width: 1200px;
+  }
+  @media (max-width: $breakpoint1110) {
+    max-width: 1110px;
+    padding: 0 24px;
+  }
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+// Body Locked
+body {
+  font-family: 'Rubik', sans-serif;
+  &.locked {
+    overflow: hidden;
+  }
+}
+.btn {
+  padding: 8px 16px;
+  background: #1874FF;
+  border-radius: 8px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

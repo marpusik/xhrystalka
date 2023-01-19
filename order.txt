@@ -1,0 +1,5 @@
+01. В figma смотрим шрифты и в fonts.google link их подключаем в index.html и если 1 шрифт то глобально в body {font-family: 'Poppins', sans-serif} в __global.scss
+02. В figma смотрим ширину container по навбару (1300px) и несем в __vars.scss $containerWidth: 1200; a padding (110px) умножаем на 2* и в $containerPadding: 40; пишем (220px)
+03. В figma смотрим colors и в __vars.scss
+04. В главном index.html подключаем @@include('./html/_header.html') а в style.scss @import './header';  дальше из _navbar.html в _header.html, _navbar.scss->_header.scss, navbar.js->main.js и function fixedNav удаляем если не нужно фиксировать меню при скролле
+05. добавляем logo в _header.html
