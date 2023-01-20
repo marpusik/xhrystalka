@@ -1,0 +1,53 @@
+section {
+  padding-top: 48px;
+}
+section .img {
+  width: 1024px;
+  height: 646px;
+}
+section p, h3, ul, table {
+  margin: 0 auto;
+  padding-top: 24px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 702px;
+}
+section span {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 64px;
+}
+li {
+  margin-left: 30px;
+}
+.blue {
+  color: $blue;
+  font-weight: 300;
+}
+.top {
+  margin-top: 40px;
+}
+table {
+  width: 650px;
+  border-top: 2px solid white;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 60px;
+}
+td, th {
+  border: 1px solid #FF8630;
+  padding: 14px;
+  vertical-align: top;
+  line-height: 1.2;
+}
+.smile{
+  justify-content: center;
+  display: flex;
+  gap: 16px;
+  margin-top: 48px;
+}

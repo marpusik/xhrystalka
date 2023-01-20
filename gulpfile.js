@@ -59,8 +59,8 @@ function html() {
 }
 
 // Images
-function images() {
-    return src(path.src.img).pipe(dest(path.build.img)).pipe(browsersync.stream())
+function img() {
+    return src(path.src.img).pipe(imagemin({progressive: true})).pipe(dest(path.build.img)).pipe(browsersync.stream())
 }
 
 // Fonts
@@ -69,20 +69,20 @@ function fonts() {
 }
 
 // Images Compress
-function img() {
-    return src(path.src.img)
-        .pipe(
-            imagemin([
-                imagemin.gifsicle({ interlaced: true }),
-                imagemin.mozjpeg({ quality: 75, progressive: true }),
-                imagemin.optipng({ optimizationLevel: 5 }),
-                imagemin.svgo({
-                    plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-                }),
-            ]),
-        )
-        .pipe(dest(path.build.img))
-}
+// function img() {
+//     return src(path.src.img)
+//         .pipe(
+//             imagemin([
+//                 imagemin.gifsicle({ interlaced: true }),
+//                 imagemin.mozjpeg({ quality: 80, progressive: true }),
+//                 imagemin.optipng({ optimizationLevel: 5 }),
+//                 imagemin.svgo({
+//                     plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+//                 }),
+//             ]),
+//         )
+//         .pipe(dest(path.build.img))
+// }
 
 // JavaScript
 function js() {
@@ -127,11 +127,11 @@ function css() {
 
 // Watch Files
 function watchFiles(params) {
-    gulp.watch([path.watch.html], html)
-    gulp.watch([path.watch.css], css)
-    gulp.watch([path.watch.js], js)
-    gulp.watch([path.watch.img], images)
-    gulp.watch([path.watch.fonts], fonts)
+    gulp.watch([path.watch.html], {usePolling: true}, gulp.series('html'))
+    gulp.watch([path.watch.css], {usePolling: true}, gulp.series('css'))
+    gulp.watch([path.watch.js], {usePolling: true}, gulp.series('js'))
+    gulp.watch([path.watch.img], {usePolling: true}, gulp.series('img'))
+    gulp.watch([path.watch.fonts], {usePolling: true}, gulp.series('fonts'))
 }
 
 // Clean
@@ -142,11 +142,11 @@ function clean(params) {
 // let build = gulp.series(clean, gulp.parallel(html, js, css, images, fonts))
 
 // Without clean build
-let build = gulp.series(gulp.parallel(html, js, css, images, fonts))
+let build = gulp.series(gulp.parallel(html, js, css, img, fonts))
 let watch = gulp.parallel(build, watchFiles, browserSync)
 
 exports.img = img
-exports.images = images
+// exports.images = images
 exports.js = js
 exports.html = html
 exports.css = css

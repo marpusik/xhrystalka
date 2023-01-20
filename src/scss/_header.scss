@@ -19,6 +19,7 @@ nav {
 }
 .menu {
   display: flex;
+  list-style-type: none;
   // .menu__item
   &__item {
     margin-left: 32px;
