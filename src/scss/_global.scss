@@ -1,5 +1,5 @@
 //html {
-//  /* 10px */
+//  /* 1rem = 10px */
 //  font-size: 62.5%;
 //}
 // Container
@@ -30,6 +30,7 @@ body {
   }
 }
 .btn {
+  height: 40px;
   padding: 8px 16px;
   background: #1874FF;
   border-radius: 8px;

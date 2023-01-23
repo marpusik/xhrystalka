@@ -1,4 +1,44 @@
 // Footer
 footer {
-    display: block;
+  display: block;
+  background: #202328;
+  padding-top: 64px;
+}
+.container {
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  width: 312px;
+  justify-content: flex-start;
+}
+.footer__social ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.footer__social p{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: white;
+  justify-self: flex-start;
+}
+.logo {
+}
+.menu {
+}
+.menu__item {
+}
+.footer__list {
+  list-style-type: none;
+}
+footer .menu__item-link {
+  color: white;
+}
+.footer__bottom {
 }
