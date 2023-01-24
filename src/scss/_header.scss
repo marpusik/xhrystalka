@@ -20,9 +20,9 @@ nav {
 .menu {
   display: flex;
   list-style-type: none;
+  gap: 32px;
   // .menu__item
   &__item {
-    margin-left: 32px;
   }
   // .menu__item-link
   &__item-link {
@@ -62,7 +62,7 @@ nav {
       animation: fade 0.1s linear;
     }
   }
-  .btn {
+  header .btn {
     margin-left: auto;
     margin-right: 48px;
   }
