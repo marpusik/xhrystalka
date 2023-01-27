@@ -11,24 +11,31 @@
   padding: 64px 0;
 }
 .slider {
+  padding: 0 100px;
 }
 .container {
 }
 .swiper {
 }
 .swiper-wrapper {
+  //max-width: 600px;
 }
 .swiper-slide {
+  display: flex;
+  justify-content: space-evenly;
 }
 .swiper__card {
   background: white;
-  width: 328px;
-  height: 284px;
+  max-width: 328px;
+  max-height: 284px;
   border-radius: 16px;
   box-shadow: 0px 4px 8px rgba(137, 147, 164, 0.15);
 }
 .swipper__img {
   border-radius: 16px 16px 0px 0px;
+  @media (max-width: $breakpoint1400) {
+    //max-width: 100px;
+  }
 }
 .swiper__text {
   margin: 20px 15px 20px 17px;
@@ -37,10 +44,12 @@
   line-height: 26px;
 }
 .swiper-pagination {
+  position: static !important;
 }
 .swiper-button-prev {
 }
 .swiper-button-next {
 }
 .swiper-scrollbar {
+  display: none;
 }

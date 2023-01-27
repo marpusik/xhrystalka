@@ -23,30 +23,39 @@ function burgerMenu() {
   })
 }
 burgerMenu()
-
+function submenu() {
+  const submenu = document.querySelector('.submenu')
+  const trigger = document.querySelector('.with__submenu')
+  trigger.addEventListener('click', () => {
+    submenu.classList.toggle('active')
+  })
+}
+submenu()
 const swiper = new Swiper('.swiper', {
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
-
+  loop: true,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
   // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-
-    // Responsive breakpoints
-    breakpoints: {
+  // Responsive breakpoints
+  breakpoints: {
     // when window width is >= 320px
     1921: {
       enable: false,
+    },
+    1400: {
+      enable: true,
+      slidesPerView: 3,
+      spaceBetween: 30
     },
     // when window width is >= 480px
     480: {

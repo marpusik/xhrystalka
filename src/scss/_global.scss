@@ -9,7 +9,10 @@
   margin: 0 auto;
   padding: 0 $containerSidePadding + px;
   @media (max-width: $breakpoint1450) {
-    max-width: 1200px;
+    //max-width: 1200px;
+  }
+  @media (max-width: $breakpoint1400) {
+    //max-width: 1200px;
   }
   @media (max-width: $breakpoint1110) {
     max-width: 1110px;
@@ -49,6 +52,6 @@ body {
     opacity: 1;
   }
 }
-@media screen and (max-width: $breakpoint780) {
-  max-width: none;
-}
+//@media (max-width: $breakpoint768) {
+//
+//}
