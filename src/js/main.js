@@ -44,7 +44,7 @@ const swiper = new Swiper('.swiper', {
   },
   // And if we need scrollbar
   scrollbar: {
-    el: '.swiper-scrollbar',
+    // el: '.swiper-scrollbar',
   },
   // Responsive breakpoints
   breakpoints: {
@@ -53,14 +53,14 @@ const swiper = new Swiper('.swiper', {
       enable: false,
     },
     1400: {
-      enable: true,
-      slidesPerView: 3,
-      spaceBetween: 30
+      // enable: true,
+      // slidesPerView: 1,
+      // spaceBetween: 1
     },
     // when window width is >= 480px
     480: {
-      slidesPerView: 3,
-      spaceBetween: 30
+      // slidesPerView: 3,
+      // spaceBetween: 30
     },
   }
 });
